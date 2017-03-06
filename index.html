@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/hst.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- this is where the list of our numbers will appear -->
+    <div></div>
+
+    <form>
+        <input type="text" />
+        <button>+</button>
+        <select>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="ON">Ontario</option>
+        </select>
+    </form>
+    <input id="subtotal" type="text" disabled="disabled" />
+    <label for="subtotal">Subtotal</label><br />
+    <input id="hst" type="text" disabled="disabled" />
+    <label for="hst">HST</label><br />
+    <input id="total" type="text" disabled="disabled" />
+    <label for="total">Total</label>
+</body>
+
+</html>
