@@ -8,22 +8,22 @@
 
 <body ng-app="myApp" ng-controller="myCtrl">
     <!-- this is where the list of our numbers will appear -->
-    <div></div>
+    <div ng-repeat="subAmount in items">{{subAmount}}</div>
 
-    <form>
-        <input type="text" />
+    <form ng-submit="calculateTotal()">
+        <input ng-model="amount" type="text" />
         <button>+</button>
-        <select>
+        <select ng-model="province">
             <option value="AB">Alberta</option>
             <option value="BC">British Columbia</option>
             <option value="ON">Ontario</option>
         </select>
     </form>
-    <input id="subtotal" type="text" disabled="disabled" />
+    <input ng-model="subtotal" id="subtotal" type="text" disabled="disabled" />
     <label for="subtotal">Subtotal</label><br />
-    <input id="hst" type="text" disabled="disabled" />
+    <input ng-model="hst" id="hst" type="text" disabled="disabled" />
     <label for="hst">HST</label><br />
-    <input id="total" type="text" disabled="disabled" />
+    <input ng-model="total" id="total" type="text" disabled="disabled" />
     <label for="total">Total</label>
 </body>
 
