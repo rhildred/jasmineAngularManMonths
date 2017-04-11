@@ -9,16 +9,16 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-mocks.js"></script>
     <!-- unit under test -->
-    <script src="js/hst.js"></script>
+    <script src="js/manmonth.js"></script>
     <script type="text/javascript">
-        describe('HstController', function () {
+        describe('MonthController', function () {
             beforeEach(module('myApp'));
             var $controller;
             beforeEach(inject(function (_$controller_) {
                 // The injector unwraps the underscores (_) from around the parameter names when matching
                 $controller = _$controller_;
             }));
-            describe('$scope.hst', function () {
+            describe('$scope.manmonths', function () {
                 var $scope, controller;
                 beforeEach(function () {
                     $scope = {};
@@ -26,17 +26,17 @@
                         $scope: $scope
                     });
                 });
-                it('sets the province to on and calculates hst', function () {
-                    $scope.province = 'ON';
-                    $scope.amount = "10";
-                    $scope.calculateTotal();
-                    expect($scope.hst).toEqual(1.3);
+                it('sets the language to C and calculates man months', function () {
+                    $scope.language = 'C';
+                    $scope.functionpoints = "100";
+                    $scope.calculateManMonths();
+                    expect($scope.manmonths).toEqual(11.03);
                 });
-                it('sets the province to ab and calculates hst', function () {
-                    $scope.province = 'AB';
-                    $scope.amount = "10";
-                    $scope.calculateTotal();
-                    expect($scope.hst).toEqual(0.5);
+                it('sets the language to vb.net and calculates man months', function () {
+                    $scope.language = 'VB.net';
+                    $scope.functionpoints = "100";
+                    $scope.calculateManMonths();
+                    expect($scope.manmonths).toEqual(4.78);
                 });
             });
         });
